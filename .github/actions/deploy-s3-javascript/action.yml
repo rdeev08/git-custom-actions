@@ -1,5 +1,16 @@
 name: 'Deploy to S3 using JavaScript'
 description: 'Deploy to S3 using JavaScript action'
+inputs:
+  aws-region:
+    description: 'AWS Region'
+    required: false
+    default: 'us-east-2'
+  s3-bucket:
+    description: 'S3 Bucket Name'
+    required: true
+  source-dir:
+    description: 'Source Directory to Upload'
+    required: true
 runs:
   using: 'node16'
   main: 'main.js'
