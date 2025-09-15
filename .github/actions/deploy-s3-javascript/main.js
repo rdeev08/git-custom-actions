@@ -14,5 +14,10 @@ function run() {
 
     // 3) Log success message
     core.notice('Deploying to S3 using JavaScript action');
+
+    // 4) Set output variable for website URL
+    const websiteUrl = `http://${bucketName}.s3-website-${region}.amazonaws.com`;
+    core.setOutput('website-url', websiteUrl);
+    core.notice(`Website URL: ${websiteUrl}`);
 }
 run();
